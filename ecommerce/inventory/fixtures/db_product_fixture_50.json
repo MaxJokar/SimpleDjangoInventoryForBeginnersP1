@@ -1,0 +1,86 @@
+[
+    {
+      "model": "inventory.product",
+      "id": "1",
+      "fields": {
+        "name": "widstar running sneakers",
+        "slug": "widstar-running-sneakers",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "2",
+      "fields": {
+        "name": "girl zada gray flip flop sandal",
+        "slug": "girl-zada-gray-flip-flop-sandal",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "3",
+      "fields": {
+        "name": "girl primotoo open toe synthetiflip flop sandal",
+        "slug": "girl-primotoo-open-toe-synthetiflip-flop-sandal",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "4",
+      "fields": {
+        "name": "girl zada orange flip flop sandal",
+        "slug": "girl-zada-orange-flip-flop-sandal",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "5",
+      "fields": {
+        "name": "lips too too demand open toe synthetiwedge heel",
+        "slug": "lips-too-too-demand-open-toe-synthetiwedge-heel",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "6",
+      "fields": {
+        "name": "lips too too skip synthetibaet flats",
+        "slug": "lips-too-too-skip-synthetibaet-flats",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "7",
+      "fields": {
+        "name": "lips too too imbody natura wedge sandal",
+        "slug": "lips-too-too-imbody-natura-wedge-sandal",
+  
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    },
+    {
+      "model": "inventory.product",
+      "id": "8",
+      "fields": {
+        "name": "lips too too jit riding boot",
+        "slug": "lips-too-too-jit-riding-boot",
+        "description": "I am a shoe",
+        "is_active": "1"
+      }
+    }
+   
+      
+    
+  ]
