@@ -11,3 +11,4 @@ This project contains two docker compose config files:
 2.	docker-compose-deploy.yml is a deployment simulation, which is used to show how a deployment would work using Docker.
 Starting local development server
 To test this project locally, ensure you have the following installed:
+.
