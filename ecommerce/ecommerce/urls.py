@@ -11,5 +11,9 @@ urlpatterns = [
     path('api/', include('inventory.urls',namespace ='inventory_api')),
     path('api-auth/', include('rest_framework.urls')),
     
+    path("accounts/",include("account.urls",namespace='account')),
+    path('main/', include('main.urls',namespace ='main')),
+    
+    
     
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

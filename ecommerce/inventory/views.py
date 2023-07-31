@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Product
 from django.core.paginator import Paginator
+# forms
+from .forms import CustomerForm
+from django.contrib import messages
 
 
 # DRF
@@ -21,11 +24,21 @@ def all_products(request):
     
     # with Paginator:
     objs = Product.objects.all()
+    #forms
+    form = CustomerForm
+    if request.method == 'POST':
+        form = CustomerForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Done','success')
+    
+    
+    
     paginator = Paginator(objs, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
-    return render(request, 'index.html', {'page_obj':page_obj})
+    return render(request, 'inventory_index.html', {'page_obj':page_obj ,'form':form })
 
 #DRF
 class ProductList(generics.ListCreateAPIView):

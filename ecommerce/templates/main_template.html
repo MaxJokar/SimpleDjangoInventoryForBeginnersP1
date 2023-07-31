@@ -1,0 +1,64 @@
+{% load static %}
+<!doctype html>
+<html lang="en" >
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/"> 
+
+    <link href="{% static 'assets/dist/css/bootstrap.min.css' %} " rel="stylesheet">
+
+    
+</head>
+
+<body>
+
+  <main>
+
+  <h1 class= "text-center text-primary">EC.DE  main template</h1>
+  <hr>
+
+  {% include 'partials/header.html' %}
+  {% include 'partials/navbar.html' %}
+  
+  
+  
+  {% block content %}
+              
+  {% endblock %}
+
+  
+ 
+
+
+   
+        <div class="pagination">
+          <span class="step-links">
+              {% if page_obj.has_previous %}
+                  <a href="?page=1">&laquo; first</a>
+                  <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+              {% endif %}
+      
+              <span class="current">
+                  Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+              </span>
+      
+              {% if page_obj.has_next %}
+                  <a href="?page={{ page_obj.next_page_number }}">next</a>
+                  <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+              {% endif %}
+          </span>
+        </div>
+
+
+  </main>
+
+  {% include 'partials/footer.html' %}
+</body>   
+</html>

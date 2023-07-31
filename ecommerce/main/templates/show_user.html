@@ -1,0 +1,34 @@
+{% extends 'main_template.html' %}
+<h1>main.templates show_user.html</h1>
+
+{% extends 'main_template.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} writing memoir {% endblock title %}
+
+{% block content %}
+    {% for user  in users %}
+        {% if user.id in blocked_list_id %}
+            <a onclick="unblock({{user.id}})" id="btn_{{usr.id}}" href="#" class="btn btn-danger">{{user.name}} {{user.family}}</a>
+        {% else %}
+            <a onclick="block({{user.id}})" id="btn_{{usr.id}}" href="#" class="btn btn-primary">{{user.name}} {{user.family}}</a>
+        {% endif %}
+
+    {% endfor %}
+
+
+
+
+
+<br>
+ {% comment %} One method to show the id of  Blocked people in  {% endcomment %}
+ {% for id  in blocked_list_id  %}
+ <h3>This id number is  Blocked :</h3>
+ <br>
+         <h2>{{id}}</h2>
+    {% endfor %}
+
+{% endblock content %}
+
+
+

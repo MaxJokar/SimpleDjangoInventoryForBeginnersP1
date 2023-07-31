@@ -1,0 +1,42 @@
+{% extends 'main_template.html' %}
+<h1>hello  main.templates main.index main</h1>
+
+{% block title %} You are selling... {% endblock title %}
+
+{% block content %}
+  {% include 'partials/slider.html' %}
+   {% if user.is_authenticated %}
+        <h1 class="text_center text-primary">Selling </h1>
+
+        {% for memoir in memoirs %}
+          <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">category</h5>
+                <h5 class="card-title">{{ memoir.memoir_title }}</h5>
+
+                <p class="card-text">
+                {{ memoir.Memoir_text }}
+                </p>
+                {% for image in memoir.images.all %}
+                {% comment %} <img class="card-img-top" src="{{media_url}}images/building.png" class='img-thumbnail img-120' alt=""> {% endcomment %}
+                  {% comment %} <img src="{{media_url}}images/memoir/UA.png" class='img-thumbnail img-120' alt="..."> {% endcomment %}
+                  <img src="{{media_url}}{{image.Memoir_image_name}}" class='img-thumbnail img-120' alt="...">
+                {% endfor %}
+                <div>
+                {% if memoir.id  in list_liked_memoir_id %}
+                <a href="#"> <i class= "fa fa-plus"></i></a>
+
+
+
+                {% endif %}
+
+            </div>
+          </div>
+    {% endfor %}
+    {% else %}
+      <h1 class="text_center text-info">Sorry , You should LOGIN to sell or buy  <a href="{% url 'account:login' %}">"Enter"</a> Here </h1>
+ {% endif %}
+{% endblock content %}
+
+
+
