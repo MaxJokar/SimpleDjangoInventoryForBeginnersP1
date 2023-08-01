@@ -5,7 +5,7 @@ SimpleDjangoInventoryForBeginnersP1
 • .env to hide the secret_key & Database (Postgres)
 • css js bootstrap , downloded from bootstrap package , ready 
 • All dependencies in requirements , including pillow for the graphic staff 
-• A good , powerful Model consist of : Category, Product , inventory , Attribute , Attribute value, image, stock control with all connnections such as : M2M, Foriengkey , 1t1
+• A good , powerful Model consist of : Category, Product , inventory , Attribute , Attribute value, image, stock control with all connnections such as : M2M, Foriengkey , 1t
 o	Install Django
 o	Create a Django Project
 o	Create a Django App
